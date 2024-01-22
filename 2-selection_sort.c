@@ -5,9 +5,9 @@
  * @array: array in use
  * @size: size of the array in use
  */
-void selection_sort(int *array, size_t size);
+void selection_sort(int *array, size_t size)
 {
-	int i, j, temp;
+	size_t i, j, temp, min;
 
 	for (i = 0; i < size - 1; i++)
 	{
@@ -22,6 +22,7 @@ void selection_sort(int *array, size_t size);
 			temp = array[min];
 			array[min] = array[i];
 			array[i] = temp;
+			print_array(array, size);
 		}
 	}
 }
